@@ -1,13 +1,10 @@
 import React from 'react';
 import homePageProject from '../images/homePageProject.jpg';
 
-// Başlık küçük ekranlarda ortalanır ve daha büyük ekranlarda sola yaslanır. 
-// Metin alanına boşluklar ve satır yüksekliği eklendi.
-
 const Home = () => {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4 text-center sm:text-left">Architecture Portfolio</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center sm:text-left">Architectural Portfolio</h1>
       <div className="opacity-80 mb-6">
         <img src={homePageProject} alt="Proje Resmi 1" className="w-full h-auto"/>
       </div>

@@ -22,16 +22,26 @@ function GastronomyandKitchenArt() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className='ml-10 mb-20'>
-        <h1 className="text-3xl mb-4">Gastronomy and Kitchen Art</h1>
-        <span className="text-sm font-normal cursor-pointer mb-24">Project Overview</span>
-        <span className="text-lg font-semibold ml-2">→</span>
+      <div className="mb-12">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Gastronomy and Kitchen Art</h1>
+        <div>
+          <span className="text-sm font-normal cursor-pointer mr-2">Project Overview</span>
+          <span className="text-lg font-semibold">→</span>
+        </div>  
+        <div className="flex justify-center items-center">
+          <span className="text-xs font-normal cursor-pointer mr-2">To address the scarcity and high cost of Asian cuisine 
+            locally, we designed a space featuring four tasting areas in two sections, with different dishes in each. Guests 
+            can sample food on the ground floor and continue dining on the first floor, where dishes are transported by 
+            elevators and served by waitstaff. The project aims to create a festival-like environment celebrating gastronomy 
+            and kitchen arts, offering a unique experience for the public, experts, and students, with a central axis guiding 
+            visitors through key areas.</span>
+        </div>
       </div>
       
-      <div className="flex flex-col space-y-6">
+      <div className="flex flex-col space-y-4">
         {images.map((image, index) => (
           <div key={index} className="w-full">
-            <img src={image} alt={`Urban Memory ${index + 1}`} className="w-full h-auto object-cover" />
+            <img src={image} alt={`Gastronomy ${index + 1}`} className="w-full h-auto object-cover rounded-lg" />
           </div>
         ))}
       </div>

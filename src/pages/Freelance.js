@@ -24,37 +24,18 @@ function Freelance() {
         <span className="text-lg font-semibold ml-2">→</span>
       </div>
 
-      <div className="flex justify-center">
-        <div className="flex w-full max-w-6xl">
-          {/* Sol Taraf */}
-          <div className="w-1/2 pr-4 mt-20">
-            {cardData.slice(0, 2).map((card, index) => (
-              <Link to={card.link} key={index}>
-                <div className="border border-transparent hover:border-gray-300 hover:transform hover:scale-105 transition-all duration-300 p-4 rounded-lg shadow-lg mb-4 h-96">
-                  <img src={card.image} alt={card.title} className="w-full h-72 object-cover rounded-lg" />
-                  <div className="flex justify-between mt-2">
-                    <h2 className="text-xl font-semibold">{card.title}</h2>
-                    <span className="text-sm text-gray-500">View project</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-          {/* Sağ Taraf */}
-          <div className="w-1/2 pl-4">
-            {cardData.slice(2).map((card, index) => (
-              <Link to={card.link} key={index}>
-                <div className="border border-transparent hover:border-gray-300 hover:transform hover:scale-105 transition-all duration-300 p-4 rounded-lg shadow-lg mb-4 h-96">
-                  <img src={card.image} alt={card.title} className="w-full h-72 object-cover rounded-lg" />
-                  <div className="flex justify-between mt-2">
-                    <h2 className="text-xl font-semibold">{card.title}</h2>
-                    <span className="text-sm text-gray-500">View project</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
+      <div className="flex flex-wrap justify-center mt-8">
+        {cardData.map((card, index) => (
+          <Link to={card.link} key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-2">
+            <div className="border border-transparent hover:border-gray-300 hover:transform hover:scale-105 transition-all duration-300 p-4 rounded-lg shadow-lg h-full">
+              <img src={card.image} alt={card.title} className="w-full h-64 object-cover rounded-lg" />
+              <div className="flex justify-between mt-2">
+                <h2 className="text-lg md:text-xl lg:text-2xl font-semibold">{card.title}</h2>
+                <span className="text-sm md:text-base text-gray-500">View project</span>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
